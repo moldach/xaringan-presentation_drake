@@ -1,0 +1,27 @@
+/* custom.css */
+.left-code {
+  color: #777;
+  width: 38%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 60%;
+  float: right;
+  padding-left: 1%;
+}
+.title-slide {
+  text-align: left !important;
+  background-image: url(https://cdn1-www.mandatory.com/assets/uploads/2017/03/0-2-e1490360590385.jpg);
+  background-size: cover;
+}
+
+.remark-slide-number {
+  display: none;
+}
+
+.inverse {
+  background-color: #272822;
+  color: #d6d6d6;
+  text-shadow: 0 0 20px #333;
+}
