@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Getting started with</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Matthew J. Oldach" />
+    <meta name="date" content="2019-02-28" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Getting started with
+## Drake in R
+### Matthew J. Oldach
+### 2019-02-28
+
+---
+
+
+
+class: middle, center, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+## Because Powerpoint is so 2017 😛
+
+.pull-left[
+&lt;img src="powerpoint.gif" width=440 height=500&gt;
+]
+
+.pull-right[
+&lt;img src="dwight.gif" width=420 height=500&gt;
+]
+
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+ 
+## Making HTTP requests to the Fitbit API
+
+&lt;img src="intro.png"/ height=420&gt;
+
+https://moldach.github.io/fitbit-project/
+
+---
+class: inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+.left-code[
+
+```r
+# Generating textures...
+ggcorrplot::ggcorrplot(corr, hc.order = TRUE, 
+           type = "lower", 
+           lab = TRUE, 
+           lab_size = 2,
+           tl.cex = 8,
+           show.legend = FALSE,
+           colors = c( "#306230", "#306230", "#0F380F" ), 
+           title="Correlogram",
+           ggtheme=theme_gameboy)
+```
+]
+
+.right-plot[
+&lt;img src="corr.png"/ height = 550&gt;
+]
+
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+ 
+&lt;img src="activity.png"/ height=500&gt;
+
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+ 
+## Animated visualizations 
+
+&lt;img src="mountains.gif"/ width=800&gt;
+
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+ 
+&lt;img src="fitbit.gif"/&gt;
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+## 3D PCA plot
+
+.left-code[
+
+```r
+library(plot3d)
+library(rgl)
+
+plot3d(pc_scores[,1:3], size=10, type='p')
+# output image
+rgl.snapshot("3DPCA-Merge.png", "png") 
+# output image series
+dir.create("animation_merge")
+for (i in 1:360) {
+  view3d(userMatrix=rotationMatrix(2*pi * i/360, 0, 1, 0))
+  rgl.snapshot(filename=paste("animation_merge/frame-",
+                              sprintf("%03d", i), ".png", sep=""))}
+```
+]
+
+.right-code[
+&lt;img src="pca.gif"&gt;
+]
+
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+## Making better figures, faster!
+
+&lt;img src="biorender.gif"/ height=450 width = 1000&gt;
+
+https://www.getbiorender.com/
+
+---
+class: center, middle
+&lt;img src="rachel.png"/ height=450 width = 1000&gt;
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+## Symbol libraries for figures
+
+* https://reactome.org/icon-lib?f=cell_types
+* https://smart.servier.com/
+* https://www.freepik.com/
+* http://ian.umces.edu/symbols/ 
+
+---
+class: center, middle## gganatogram
+
+&lt;img src="ggmouse.png"/ width=880 height=440&gt;
+
+https://github.com/jespermaag/gganatogram
+---
+class: center, middle
+
+&lt;img src="schematic.jpg"/ width=1110 height=980&gt;
+
+---
+class: center, middle
+## 2D Brain ROIs with ggseg
+
+&lt;img src="brain-atlas1.png"/ height=430 width = 800&gt;
+
+https://github.com/LCBC-UiO/ggseg
+---
+class: center, middle
+
+## 3D Brain ROIs BrainNet/Mango
+
+&lt;img src="hippocampus.png"/ height=400&gt;
+
+https://bit.ly/2EzijI4
+
+---
+class: center, middle
+## 3D Brain ROIs in R
+
+
+&lt;img src="rBrain.png"/ height=400&gt;
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+## 📼👾🕹💾📺Vaporwave themes for ggplot2
+&lt;img src="vapoRwave.png"/ width=880 height=450&gt;
+
+https://github.com/moldach/vapoRwave
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+&lt;img src="sparkJoy.jpg"/ width = 1100, height = 600&gt;
+---
+
+class: inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+.pull-left[
+&lt;img src="sisyphus.gif" width=300 height=550&gt;
+]
+
+.pull-right[
+&lt;img src="twitter.png" width=420 height=550&gt;
+]
+
+---
+class: center
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+&lt;img src="baby.gif" height = 600, width = 1000&gt;
+
+---
+class: center, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+&lt;img src="drake.gif" height=590&gt;
+
+---
+class: inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+## Set up a project
+
+
+```r
+library(drake)
+library(tidyverse)
+
+create_plot &lt;- function(data) {
+  ggplot(data, aes(x = Petal.Width, fill = Species)) +
+    geom_histogram()
+}
+```
+
+---
+class: inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+## Declare each step in advance
+
+
+```r
+plan &lt;- drake_plan(
+    report = rmarkdown::render(
+    knitr_in("report.html"),
+    output_file = file_out("report.html"),
+    quiet = TRUE
+  ),
+  
+  raw_data = read_xl::read_xlsx(file_in("raw-data.xlsx")),
+  
+  data = raw_data %&gt;% 
+    mutate(Species = forcats::fct_inorder(Species)) %&gt;% 
+    select(-X_1),
+  
+  hist = create_plot(data),
+  
+  fit = lm(Sepal.Width ~ Petal.Width + Species, data)
+)
+```
+
+---
+class: inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+## Run the project
+
+
+```r
+make(plan)
+## target raw_data
+## target data
+## target fit
+## target hist
+## target report
+```
+
+---
+class: inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+## Change anything and drake detects changes
+
+
+```r
+# create_plot &lt;- function(data) {
+#   ggplot(data, aes(x = Petal.Width, fill = Species)) +
+#     geom_histogram()
+# }
+
+create_plot &lt;- function(data){
+        ggplot(data, aes(x = Petal.Width, fill = Species)) +
+                geom_histogram(binwidth = 0.25)
+}
+```
+---
+class: inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+## drake detects changes
+
+
+```r
+config &lt;- drake_config(plan)
+outdated(config)
+## [1] "hist"  "report"
+
+
+vis_drake_graph(config)
+```
+
+---
+class: center, middle
+
+&lt;img src ="vis_drake_graph.png" height=550 width = 1000&gt;
+
+---
+class: center, middle
+
+ 
+&lt;img src ="dependency.png" height=550 width = 1000&gt;
+
+---
+class: center, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+## Reproducibilty and high-performance computing
+
+&lt;img src ="drake1.png"&gt;
+
+
+```r
+make(plan, jobs = 16, parallelism = "clustering")
+```
+
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+&lt;img src ="drakeMeme.jpg" height = 600 width = 800&gt;
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+ 
+## Questions
+
+&lt;img src ="Cars_Travolta.gif" width=820 height=500&gt;
+
+---
+class: center, middle, inverse
+background-image: url("http://www.pptbackgrounds.org/uploads/dark-blue-background-backgrounds-wallpapers.jpg")
+
+## Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan) which is powered by [**reactjs**](https://en.wikipedia.org/wiki/React_(JavaScript_library).
+
+Twitter: [**@MattOldach**](https://twitter.com/MattOldach)
+
+Website: [**moldach.github.io**](https://moldach.github.io/)
+
+Slides: [https://moldach.github.io/xaringan-presentation_drake/](https://moldach.github.io/xaringan-presentation_drake/)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
