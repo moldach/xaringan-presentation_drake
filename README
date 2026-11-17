@@ -5,5 +5,7 @@ Presentation given at the Douglas Mental Health University Institute
 Includes an introduction to Drake (Data Frames in R for Make), how to making better figures faster, and accessing the Fitbit API
 
 
-Slides are here: https://moldach.github.io/xaringan-presentation_drake/#1
+The slide source is available in [index.Rmd](index.Rmd). The former GitHub Pages presentation is retired.
+
+Related article: https://matthewoldach.com/field-notes/drake/
 
